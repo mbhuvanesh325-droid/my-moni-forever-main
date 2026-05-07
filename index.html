@@ -1,13 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hey, Monisha 💜 — For You</title>
-    <meta name="description" content="A little corner of the internet made just for Monisha. With love." />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hey, Monisha 💜 — For You</title>
+  <meta name="description" content="A little corner of the internet made just for Monisha. With love." />
+  <meta name="author" content="Bhuvanesh" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hey, Monisha 💜 — For You" />
+  <meta property="og:description" content="A personalized web application for expressing love and proposing marriage." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+    <!-- ==================== PAGE 1 ==================== -->
+    <section id="page1" class="page" style="background-image:url('assets/bg-purple.jpg'); background-position:top center;">
+
+      <!-- Nav -->
+      <header class="nav">
+        <div class="nav-logo">For You <span class="text-violet-mid">💜</span></div>
+        <nav class="nav-links">
+          <a href="#page1" class="nav-link active">Home</a>
+          <a href="#page2" class="nav-link">My Feelings</a>
+          <a href="#page2" class="nav-link">Our Moments</a>
+          <a href="#page2" class="nav-link">For You</a>
+        </nav>
+        <button class="nav-btn">For My Love 💜</button>
+      </header>
+
+      <!-- Floating hearts container -->
+      <div id="hearts1" class="hearts-container"></div>
+
+      <!-- Portrait -->
+      <img
+        src="assets/monisha.png"
+        alt="Monisha portrait with lavender flowers"
+        class="portrait"
+      />
+
+      <!-- Hero content -->
+      <div class="hero-wrapper">
+        <div class="hero-text">
+          <p class="script-text text-4xl text-violet-mid fade-up" style="animation-delay:0.2s">
+            Hey, <span class="inline-block float-y2">♡</span>
+          </p>
+          <h1 class="serif-text text-7xl text-violet-deep mt-1 fade-up" style="animation-delay:0.4s">
+            Monisha
+          </h1>
+          <div class="divider fade-up" style="animation-delay:0.6s">
+            <div class="divider-line"></div>
+            <svg class="icon-sm text-violet-mid" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <div class="divider-line"></div>
+          </div>
+
+          <p class="text-violet-deep fade-up" style="animation-delay:0.8s">
+            You mean the <em class="script-text text-2xl text-violet-mid">world</em> to me.
+          </p>
+          <p class="mt-4 text-violet-deep-90 fade-up" style="animation-delay:1s">
+            Un kitta sollanum nu romba naal wait pannitu iruken...
+          </p>
+          <p class="mt-4 text-violet-deep-90 fade-up" style="animation-delay:1.2s">
+            Nee vandha dhan en <strong class="text-violet-mid">life complete</strong> ah feel aagudhu...
+          </p>
+
+          <div class="mt-8 fade-up" style="animation-delay:1.4s">
+            <a href="#page2" class="btn-love">Click Pannalama? 😊</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#page2" class="scroll-indicator">
+        <span class="scroll-circle float-y">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+        <span class="scroll-label">Scroll Down</span>
+      </a>
+
+      <!-- Bottom bar -->
+      <div class="bottom-bar">
+        <span></span>
+        <svg class="icon-sm text-violet-mid float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <span>01 / 02</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <section id="page2" class="page" style="background-image:url('assets/bg-purple.jpg'); background-position:bottom center;">
+
+      <!-- Nav -->
+      <header class="nav">
+        <div class="nav-logo">For You <span class="text-violet-mid">💜</span></div>
+        <nav class="nav-links">
+          <a href="#page1" class="nav-link">Home</a>
+          <a href="#page2" class="nav-link active">My Feelings</a>
+          <a href="#page2" class="nav-link">Our Moments</a>
+          <a href="#page2" class="nav-link">For You</a>
+        </nav>
+        <button class="nav-btn">For My Love 💜</button>
+      </header>
+
+      <!-- Floating hearts -->
+      <div id="hearts2" class="hearts-container"></div>
+
+      <div class="page2-content">
+        <!-- Title -->
+        <div class="text-center fade-up">
+          <h2 class="script-text text-5xl text-violet-deep">
+            Kella Description <span class="text-violet-mid">💜</span>
+          </h2>
+          <div class="divider" style="justify-content:center;">
+            <div class="divider-line-wide"></div>
+            <svg class="icon-xs text-violet-mid" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <div class="divider-line-wide"></div>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="feelings-grid">
+          <div class="feelings-col fade-up" style="animation-delay:0.2s">
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p><strong>Moni...!!</strong><br>Enna nu thrla Ennaku<br>Un kuda iruka apo Nah <strong class="text-violet-mid">Romba Unmaiya</strong> iruka marii feel pandra...!!</p>
+            </div>
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p>Un kitta rdhəo oru <strong class="text-violet-mid">Positive vibe</strong> iruku nah</p>
+            </div>
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p>En life la Niraiya Ezhathurukan<br>But Ine <strong class="text-violet-mid">En Life marum</strong> nu ninaikura</p>
+            </div>
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p>Nee okiee solla matta nu ennaku Theriyum<br>But <strong class="text-violet-mid">I Can't</strong> ennala en Feelings Ah Express panna mudiyala</p>
+            </div>
+          </div>
+
+          <div class="feelings-col fade-up" style="animation-delay:0.4s">
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p>Nee enna solluva nu theriyala<br>But nee <strong class="text-violet-mid">Okiee</strong> nu sonna<br>Niraiya Peru Solluvaga</p>
+            </div>
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p>Apadi pathupen ippadi pathupen nu but ennaku en <strong class="text-violet-mid">Dream gurl</strong> ah<br>Enaku Oru ponnu porandha eppadi pathupen oh adhey marii en <strong class="text-violet-mid">Dream Gurl</strong> ah pathukanum nu aasa...!!</p>
+            </div>
+            <div class="feeling-item">
+              <svg class="feeling-heart float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <p>Unnaku Enna thoonudho sollu<br><strong class="text-violet-mid">Wait pandra</strong>...!!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Love card -->
+        <div class="love-card-wrapper fade-up" style="animation-delay:0.6s">
+          <div class="glass-card love-card pulse-glow">
+            <svg class="love-card-heart-top float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <p class="serif-text text-2xl text-violet-deep">I Love You</p>
+            <p class="script-text text-6xl text-violet-mid mt-1">Monisha</p>
+            <p class="mt-3 script-text text-xl text-violet-deep">Kalyanam pannikalama....!! 💍</p>
+            <svg class="love-card-heart-left float-y2" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <svg class="love-card-heart-right float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="bottom-bar">
+        <a href="#page1" class="back-btn">← Back</a>
+        <svg class="icon-sm text-violet-mid float-y" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <span>02 / 02</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>

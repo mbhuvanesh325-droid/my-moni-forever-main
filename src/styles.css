@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 @theme inline {
   --radius-lg: var(--radius);
@@ -41,7 +41,10 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
+  * {
+    border-color: var(--color-border);
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -50,84 +53,187 @@
 }
 
 @layer utilities {
-  .font-script { font-family: var(--font-script); }
-  .font-serif { font-family: var(--font-serif); }
-
-  .glass-card {
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(168,85,247,0.25);
-    box-shadow: 0 20px 60px -20px rgba(139,92,246,0.35);
+  .font-script {
+    font-family: var(--font-script);
   }
 
-  .text-violet-deep { color: oklch(0.32 0.2 295); }
-  .text-violet-mid { color: oklch(0.5 0.22 295); }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    box-shadow: 0 20px 60px -20px rgba(139, 92, 246, 0.35);
+  }
+
+  .text-violet-deep {
+    color: oklch(0.32 0.2 295);
+  }
+
+  .text-violet-mid {
+    color: oklch(0.5 0.22 295);
+  }
 
   .btn-love {
     background: linear-gradient(135deg, oklch(0.55 0.24 300), oklch(0.42 0.22 290));
     color: white;
-    box-shadow: 0 10px 30px -10px rgba(139,92,246,0.7);
+    box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.7);
     transition: all 0.3s ease;
   }
-  .btn-love:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 20px 40px -10px rgba(139,92,246,0.9); }
+
+  .btn-love:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.9);
+  }
 
   .nav-link {
     position: relative;
     transition: color 0.3s;
   }
+
   .nav-link.active::after {
     content: "";
-    position: absolute; left: 0; right: 0; bottom: -6px;
-    height: 2px; background: oklch(0.4 0.22 295);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: oklch(0.4 0.22 295);
     border-radius: 2px;
   }
 
   .photo-ring {
     border-radius: 9999px;
     padding: 8px;
-    background: radial-gradient(circle, rgba(255,255,255,0.7), rgba(216,180,254,0.4));
-    box-shadow: 0 0 80px rgba(192,132,252,0.6), inset 0 0 40px rgba(255,255,255,0.4);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7), rgba(216, 180, 254, 0.4));
+    box-shadow: 0 0 80px rgba(192, 132, 252, 0.6), inset 0 0 40px rgba(255, 255, 255, 0.4);
   }
 
   @keyframes floatY {
-    0%,100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-  }
-  @keyframes floatY2 {
-    0%,100% { transform: translateY(0) rotate(0); }
-    50% { transform: translateY(-30px) rotate(-8deg); }
-  }
-  @keyframes riseDrift {
-    0% { transform: translateY(0) translateX(0) scale(0.5) rotate(0deg); opacity: 0; }
-    10% { opacity: 1; }
-    50% { transform: translateY(-50vh) translateX(var(--drift)) scale(1) rotate(15deg); }
-    100% { transform: translateY(-110vh) translateX(calc(var(--drift) * -1)) scale(1.2) rotate(-15deg); opacity: 0; }
-  }
-  @keyframes heartBeat {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.25); }
-  }
-  @keyframes spin {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-  @keyframes shimmer {
-    0%,100% { opacity: 0.6; }
-    50% { opacity: 1; }
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes pulseGlow {
-    0%,100% { box-shadow: 0 0 60px rgba(192,132,252,0.5); }
-    50% { box-shadow: 0 0 100px rgba(192,132,252,0.9); }
+
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
   }
 
-  .float-y { animation: floatY 5s ease-in-out infinite; }
-  .float-y2 { animation: floatY2 7s ease-in-out infinite; }
-  .rise-heart { animation: riseHearts linear infinite; }
-  .shimmer { animation: shimmer 3s ease-in-out infinite; }
-  .fade-up { animation: fadeUp 1s ease-out both; }
-  .pulse-glow { animation: pulseGlow 4s ease-in-out infinite; }
+  @keyframes floatY2 {
+
+    0%,
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+
+    50% {
+      transform: translateY(-30px) rotate(-8deg);
+    }
+  }
+
+  @keyframes riseDrift {
+    0% {
+      transform: translateY(0) translateX(0) scale(0.5) rotate(0deg);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-50vh) translateX(var(--drift)) scale(1) rotate(15deg);
+    }
+
+    100% {
+      transform: translateY(-110vh) translateX(calc(var(--drift) * -1)) scale(1.2) rotate(-15deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes heartBeat {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.25);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes shimmer {
+
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGlow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 60px rgba(192, 132, 252, 0.5);
+    }
+
+    50% {
+      box-shadow: 0 0 100px rgba(192, 132, 252, 0.9);
+    }
+  }
+
+  .float-y {
+    animation: floatY 5s ease-in-out infinite;
+  }
+
+  .float-y2 {
+    animation: floatY2 7s ease-in-out infinite;
+  }
+
+  .rise-heart {
+    animation: riseHearts linear infinite;
+  }
+
+  .shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .fade-up {
+    animation: fadeUp 1s ease-out both;
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 4s ease-in-out infinite;
+  }
 }
